@@ -10,8 +10,7 @@ public class Main {
     static double total_bayar;
     static List<Product> products = new ArrayList<>();
     static List<SelectedProduct> selected_products = new ArrayList<>();
-    static String selected_pembayaran, selected_bank;
-    static int selected_no_pembayaran;
+    static String selected_pembayaran, selected_bank, selected_no_pembayaran;
 
     public static void main(String[] args) throws IOException {
         System.out.println("Selamat datang di CEDAR Cashier application");
@@ -151,7 +150,7 @@ public class Main {
                 pilihan_bank = InputAngka("Masukkan Pilihan Bank Anda : ", 1,bank.length);
                 selected_bank = bank[pilihan_bank - 1];
                 System.out.print("Masukkan No Rekening Bank Anda : ");
-                selected_no_pembayaran = scanner.nextInt();
+                selected_no_pembayaran = scanner.nextLine();
                 break;
             case 4:
                 // Case jika pembayaran e-wallet
@@ -166,7 +165,7 @@ public class Main {
                 pilihan_wallet = InputAngka("Masukkan Pilihan E-Wallet Anda : ", 1,e_wallet.length);
                 selected_bank = bank[pilihan_wallet - 1];
                 System.out.print("Masukkan No Handphone E-Wallet Anda : ");
-                selected_no_pembayaran = scanner.nextInt();
+                selected_no_pembayaran = scanner.nextLine();
                 break;
         }
 
